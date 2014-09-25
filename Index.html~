@@ -1,0 +1,152 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+
+  <link href="personal/metro-bootstrap.css" rel="stylesheet">
+    <link href="personal/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="personal/iconFont.css" rel="stylesheet">
+    <link href="personal/docs.css" rel="stylesheet">
+    <link href="personal/prettify.css" rel="stylesheet">
+
+
+    <!-- Load JavaScript Libraries -->
+    <script src="personal/jquery.min.js"></script>
+    <script src="personal/jquery.widget.min.js"></script>
+    <script src="personal/jquery.mousewheel.js"></script>
+    <script src="personal/prettify.js"></script>
+    <script src="personal/metro.min.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="personal/load-metro.js"></script>
+
+
+
+    </head>
+
+
+    <body class="metro">
+<div class="container">
+<div class="grid ">
+	
+	    <div class="row" >
+		<div class="span2">
+		<img src="personal/logo.png" class="polaroid bd-blue shadow ">
+		</div>
+
+		<div class="span10"><br>
+		    <nav class="navigation-bar">
+			    <nav class="navigation-bar-content">
+			    <a class="element" href="3"> <span class="icon-rocket"></span> Manufacturera GOMEZ</a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="3">Productos/Catálogo <span class="icon-sale"></span></a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="3">Información  <span class="icon-info"></span></a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="3">Pedidos <span class="icon-cart-2"></span></a>
+			    <span class="element-divider"></span>
+			    </nav>
+		    </nav>
+
+		</div>
+    	    </div>
+
+    
+
+
+	    <div class="row">
+		<div class="span8 ">
+		    <dl>
+		    <dt>¿Quiénes somos?</dt>
+		    <dd class="text-justify">Somos una pequeña distribuidora que inicia operaciones en 1998, al principio sólo nos dedicabamos a los uniformes escolares, pero conforme ha pasado el tiempo hemos ido creciendo, ahora contamos además con uniformes industriales, uniformes hoteleros, de cocina,batas, camisas polo, cascos, botas, estampados personalizados, etc. Todo en tallas pequeñas hasta tallas extra grandes para mujeres y hombres.</dd>
+		    </dl>			
+			
+		    <dl>
+		    <dt>Catálogo de productos</dt>
+		    <dd class="text-justify">Podrá encontrar a mayor detalle lo que usted está buscando, tallas, precios de mayoreo y menudeo, colores, tipos de tela y mucho más.</dd>
+
+			<button class="shortcut primary">
+			<i class="icon-sale"></i>
+			Catálogo
+			<small class="bg-lightBlue">Productos</small>
+			</button>			
+
+		    </dl>
+
+	
+		</div>
+		<div class="span4">
+
+			<div class="panel">
+			<div class="panel-header bg-lightBlue fg-white">
+			Algo de lo que ofrecemos
+			</div>
+			<div class="panel-content">
+			    <div class="carousel bg-white" style="width: 100%; height: 250px;">
+				    <div class="slide">
+					<div class="image-container">
+						<img src="personal/Bata-de-Chef.jpg" class="rounded bd-amber ">
+						 <div class="overlay-fluid">
+						Uniformes para cocina.
+						</div>
+					</div>
+				    </div>
+				     
+				    <div class="slide">
+					<div class="image-container">
+						<img src="personal/industria.jpeg">
+						 <div class="overlay-fluid">
+						Uniformes industriales.
+						</div>
+					</div>
+				    </div>
+
+				    <div class="slide">
+					<div class="image-container">
+						<img src="http://www.adx.com.mx/virtual/wp-content/uploads/2012/11/rojo-blanco1-200x200.png" >
+						 <div class="overlay-fluid">
+						Uniformes depotrivos.
+						</div>
+					</div>
+				    </div>
+				     
+<!--				    <a class="controls left"><i class=" ribbed-blue  icon-arrow-left-2"></i></a>
+				    <a class="controls right"><i class="icon-arrow-right-2 ribbed-blue "></i></a>-->
+			    </div>
+			</div>
+			</div>
+		</div>
+    	    </div>
+
+	    <div class="row ">
+		    <div class="span6" >level 2 </div>
+		    <div class="span6" >level 2 </div>
+    	    </div>
+
+
+</div>
+</div>
+<script>
+$('.carousel').carousel({
+auto: true,
+effect:"fade",
+height:250,
+period: 3000,
+duration: 2000,
+markers: {
+type: "square",
+position:"top-right"
+}
+});
+</script>
+    </body>
+    </html>

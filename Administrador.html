@@ -1,0 +1,322 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+
+  <link href="personal/metro-bootstrap.css" rel="stylesheet">
+    <link href="personal/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="personal/iconFont.css" rel="stylesheet">
+    <link href="personal/docs.css" rel="stylesheet">
+    <link href="personal/prettify.css" rel="stylesheet">
+
+
+    <!-- Load JavaScript Libraries -->
+    <script src="personal/jquery.min.js"></script>
+    <script src="personal/jquery.widget.min.js"></script>
+    <script src="personal/jquery.mousewheel.js"></script>
+    <script src="personal/prettify.js"></script>
+    <script src="personal/metro.min.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="personal/load-metro.js"></script>
+
+<style>
+ .catalogo{
+ height:300px;
+ width: 300px;
+ }
+ 
+ #btnEliminar3,#btnEliminar2,#btnEliminar1{
+ display:none;
+ }
+ 
+</style>
+
+    </head>
+
+
+    <body class="metro">
+<div class="container">
+<div class="grid">
+	
+	    <div class="row" >
+		<div class="span2">
+		<img src="personal/logo.png" class="polaroid bd-blue shadow ">
+		</div>
+
+		<div class="span10"><br>
+		    <nav class="navigation-bar">
+			    <nav class="navigation-bar-content">
+			    <a class="element" href="Index.html"> <span class="icon-rocket"></span> Manufacturera GOMEZ</a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="Productos.html">Productos/Catálogo <span class="icon-sale"></span></a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="Informacion.html">Información  <span class="icon-info"></span></a>
+			    <span class="element-divider"></span>
+			    <a class="element" href="3">Pedidos <span class="icon-cart-2"></span></a>
+			    <span class="element-divider"></span>
+			    </nav>
+		    </nav>
+
+		</div>
+    	    </div>
+
+    
+<hr>
+
+	    <div class="row">
+		<div class="span2">
+			<nav class="sidebar dark">
+			<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>Categorías</a></li>
+			<li class=""><a href="#"><i class="icon-tag"></i>Medicina</a></li>
+			<li class=""><a href="#"><i class="icon-tag"></i>Escolar</a></li>
+			<li class=""><a href="#"><i class="icon-tag"></i>Industrial</a></li>
+			<li class=""><a href="#"><i class="icon-tag"></i>Policiaco</a></li>
+			<li class=""><a href="#"><i class="icon-tag"></i>Deportes</a></li>
+			
+			
+			
+			</ul>
+			</nav>
+		</div>
+	
+	<div class="span10">
+			<div class="accordion with-marker" data-role="accordion">
+				<div class="accordion-frame active">
+				<a href="#" class="heading bg-lightBlue fg-black">Sueteres</a>
+					<div class="content">
+					<form method="post" enctype="multipart/form-data" action="subir_imagen.php">
+							<div class="row">
+								<div class="span3">
+								<img id="img_1" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 1">
+									<div class="input-control file" id="file1">
+										<input type="file" id="file_url1"/>
+										<button class="btn-file"></button>
+									</div>
+									<button id="btnEliminar1" class="image-button primary">
+									Eliminar
+									 <i class="icon-remove bg-red"></i>
+									</button>
+								</div>
+								
+								<div class="span3 ">
+								<img id="img_2" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 2">
+									<div  class="input-control file" id="file2">
+										<input type="file" id="file_url2"/>
+										<button class="btn-file"></button>
+									</div>
+									<button id="btnEliminar2" class="image-button primary">
+									Eliminar
+									 <i class="icon-remove bg-red"></i>
+									</button>
+								</div>
+								
+								<div class="span3">
+								<img id="img_3" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 3">
+									<div class="input-control file" id="file3">
+										<input type="file" id="file_url3"/>
+										<button class="btn-file"></button>
+									</div>
+									<button id="btnEliminar3" class="image-button primary">
+									Eliminar
+									 <i class="icon-remove bg-red"></i>
+									</button>
+								</div>
+							</div>
+					</div>
+					</form>
+				<hr>
+				<div class="row ">
+					<div class="span5">
+	
+							
+					<div class="row" id="tallaRow">
+						<div class="span2">
+							<div class="input-control text">
+								<input type="text" value="" placeholder="Talla"/>
+								<button class="btn-clear"></button>
+							</div>
+						</div>
+						
+						<div class="span2">
+							<div class="input-control text">
+								<input type="text" value="" placeholder="Precio"/>
+								<button class="btn-clear"></button>
+							</div>
+						</div>
+					</div>
+<!--
+					<div class="row">
+						<div class="span2">
+							<div class="input-control text">
+								<input type="text" value="" placeholder="Talla"/>
+								<button class="btn-clear"></button>
+							</div>
+						</div>
+						
+						<div class="span2">
+							<div class="input-control text">
+								<input type="text" value="" placeholder="Precio"/>
+								<button class="btn-clear"></button>
+							</div>
+						</div>
+						<div class="span1">
+						<i id="removeTalla" class="icon-minus on-left" style="background: white; color: black; padding: 10px; border-radius: 50%"></i>
+						</div>
+					</div>
+	-->			
+					<div class="row ">
+					<i id="addTalla" class="icon-plus-2 on-left" style="background: red; color: white; padding: 10px; border-radius: 50%"></i>
+					</div>
+					
+					</div>
+					
+					<div class="span4">
+					
+					</div>
+				</div>
+				
+				</div>
+				<!--
+				<div class="accordion-frame">
+				<a href="#" class="heading bg-lightBlue fg-black">Blusas</a>
+				<div class="content">...</div>
+				</div>
+				<div class="accordion-frame">
+				<a href="#" class="heading  bg-lightBlue fg-black">Pantalones</a>
+				<div class="content">...</div>
+				</div>-->
+				
+			</div>
+	</div>
+    	
+		    
+		
+		
+		
+		</div>
+
+	    <div class="row ">
+		    <div class="span6" >level 2 </div>
+		    <div class="span6" >level 2 </div>
+    	    </div>
+
+
+</div>
+</div>
+<script>
+function mostrarImagen(input,imagen,a) {
+  if(a){
+	if (input.files && input.files[0]) {
+		  var reader = new FileReader();
+			  reader.onload = function (e) {
+				$(imagen).attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+		 }
+	}else{
+	$(input).next().val('');
+	$(imagen).attr('src','');	
+	}  
+return true;
+	}
+ 
+ function ocultarFILEshowBoton(FILE,Boton){
+ $(FILE).hide( "slow", function() {
+	$(Boton).show(250);
+	});
+return true;
+	}
+ 
+ 
+ $("#btnEliminar1").click(function(event){
+ event.preventDefault();
+ ocultarFILEshowBoton(this,"#file1");
+ mostrarImagen('#file_url1','#img_1',false);
+ });
+ 
+ $("#btnEliminar2").click(function(event){
+ event.preventDefault();
+ ocultarFILEshowBoton(this,"#file2");
+ mostrarImagen('#file_url2','#img_2',false);
+ });
+ 
+ $("#btnEliminar3").click(function(event){
+ event.preventDefault();
+ ocultarFILEshowBoton(this,"#file3");
+ mostrarImagen('#file_url3','#img_3',false);
+ });
+ 
+ 
+$("#file_url1").change(function(){
+ mostrarImagen(this,'#img_1',true);
+ ocultarFILEshowBoton("#file1","#btnEliminar1");
+});
+$("#file_url2").change(function(){
+ mostrarImagen(this,'#img_2',true);
+ ocultarFILEshowBoton("#file2","#btnEliminar2");
+});
+$("#file_url3").change(function(){
+ mostrarImagen(this,'#img_3',true);
+ ocultarFILEshowBoton("#file3","#btnEliminar3");
+});
+
+function bottom(){
+$('html, body').animate({
+             scrollTop: $(document).height()
+         },
+         750);
+return true;
+}
+
+$('#addTalla').click(function(){
+var a;
+a=$('#tallaRow');
+a.after('<div class="row"><div class="span2"><div class="input-control text"><input type="text" value="" placeholder="Talla"/><button class="btn-clear"></button></div></div><div class="span2"><div class="input-control text"><input type="text" value="" placeholder="Precio"/><button class="btn-clear"></button></div></div><div class="span1"><i id="removeTalla" onclick="removeTalla(this);" class="icon-minus on-left" style="background: white; color: black; padding: 10px; border-radius: 50%"></i></div></div>');
+bottom();
+});
+
+
+
+function removeTalla(a){
+$(a).closest('div').parent('div').remove();
+return true;
+//alert($(a).html());
+};
+
+$("img").on('click', function(){
+if($(this).attr("src")!=""){
+var a=$(this).clone();
+a.css({'width' : '300px' , 'height' : '430px'});
+	$.Dialog({
+	overlay: true,
+	shadow: true,
+	flat: false,
+	height:450,
+	width:300,
+	icon: '<span class=" icon-zoom-in"></span>',
+	title: 'Zoom',
+	padding: 10,
+	//content:a
+	onShow: function(_dialog){
+	var content = _dialog.children('.content');
+	content.append(a);	
+	}
+	});
+	}
+});
+
+
+</script>
+    </body>
+    </html>
