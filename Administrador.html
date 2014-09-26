@@ -31,7 +31,7 @@
 
 <style>
  .catalogo{
- height:300px;
+ height:410px;
  width: 300px;
  }
  
@@ -44,7 +44,7 @@
     </head>
 
 
-    <body class="metro">
+    <body class="metro" onload="createUUID();">
 <div class="container">
 <div class="grid">
 	
@@ -74,33 +74,16 @@
 <hr>
 
 	    <div class="row">
-		<div class="span2">
-			<nav class="sidebar dark">
-			<ul>
-			<li class="active"><a href="#"><i class="icon-home"></i>Categorías</a></li>
-			<li class=""><a href="#"><i class="icon-tag"></i>Medicina</a></li>
-			<li class=""><a href="#"><i class="icon-tag"></i>Escolar</a></li>
-			<li class=""><a href="#"><i class="icon-tag"></i>Industrial</a></li>
-			<li class=""><a href="#"><i class="icon-tag"></i>Policiaco</a></li>
-			<li class=""><a href="#"><i class="icon-tag"></i>Deportes</a></li>
+	<div class="span12">
 			
-			
-			
-			</ul>
-			</nav>
-		</div>
-	
-	<div class="span10">
-			<div class="accordion with-marker" data-role="accordion">
-				<div class="accordion-frame active">
-				<a href="#" class="heading bg-lightBlue fg-black">Sueteres</a>
-					<div class="content">
+					
 					<form method="post" enctype="multipart/form-data" action="subir_imagen.php">
+					<input type="hidden" class='identificador' name="identificador" />
 							<div class="row">
-								<div class="span3">
+								<div class="span4">
 								<img id="img_1" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 1">
 									<div class="input-control file" id="file1">
-										<input type="file" id="file_url1"/>
+										<input name="file_url1" type="file" id="file_url1"/>
 										<button class="btn-file"></button>
 									</div>
 									<button id="btnEliminar1" class="image-button primary">
@@ -109,10 +92,10 @@
 									</button>
 								</div>
 								
-								<div class="span3 ">
+								<div class="span4">
 								<img id="img_2" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 2">
 									<div  class="input-control file" id="file2">
-										<input type="file" id="file_url2"/>
+										<input type="file" name="file_url2" id="file_url2"/>
 										<button class="btn-file"></button>
 									</div>
 									<button id="btnEliminar2" class="image-button primary">
@@ -121,10 +104,10 @@
 									</button>
 								</div>
 								
-								<div class="span3">
+								<div class="span4">
 								<img id="img_3" class="catalogo polaroid bg-lightBlue bd-white shadow" src="" alt="Imagen 3">
 									<div class="input-control file" id="file3">
-										<input type="file" id="file_url3"/>
+										<input type="file" name="file_url3" id="file_url3"/>
 										<button class="btn-file"></button>
 									</div>
 									<button id="btnEliminar3" class="image-button primary">
@@ -133,8 +116,8 @@
 									</button>
 								</div>
 							</div>
-					</div>
-					</form>
+					
+					
 				<hr>
 				<div class="row ">
 					<div class="span5">
@@ -143,15 +126,15 @@
 					<div class="row" id="tallaRow">
 						<div class="span2">
 							<div class="input-control text">
-								<input type="text" value="" placeholder="Talla"/>
-								<button class="btn-clear"></button>
+							<label>Talla:</label>
+								<input name="talla1" type="text" value="" placeholder="Talla"/>
 							</div>
 						</div>
 						
 						<div class="span2">
 							<div class="input-control text">
-								<input type="text" value="" placeholder="Precio"/>
-								<button class="btn-clear"></button>
+							<label>Precio:</label>
+								<input name="precio1" type="text" value="" placeholder="Precio"/>
 							</div>
 						</div>
 					</div>
@@ -176,17 +159,88 @@
 					</div>
 	-->			
 					<div class="row ">
+					<input type="hidden" name="numElementos" class="numElementos"/>
+					<div class="span5">
 					<i id="addTalla" class="icon-plus-2 on-left" style="background: red; color: white; padding: 10px; border-radius: 50%"></i>
 					</div>
+					</div>
 					
 					</div>
 					
-					<div class="span4">
-					
+					<div class="span7">
+						<div class="row">
+						<div class="span7">
+						<div class="input-control text">
+							<label>Color(es):</label>
+							<input name="color" type="text" placeholder=""/>
+						</div>
+						</div>
+						</div>
+						<div class="row">
+						<div class="span7">
+						<div class="input-control text">
+							<label>Material(es):</label>
+							<input name="material" type="text" value="" placeholder=""/>
+						</div>
+						</div>
+						</div>
+						
+						<div class="row">
+						<div class="span7">
+							<div class="input-control textarea">
+								<label>Comentarios:</label>
+								<textarea name="comentario"></textarea>
+							</div>		
+						</div>
+						</div>
+						
+						<div class="row">
+						<div class="span7">
+							<div class="input-control select">
+							<label>Categoría general</label>
+							<select name="cg">
+							<option>Medicina</option>
+							<option>Escolar</option>
+							<option>Industrial</option>
+							<option>Policiaco</option>
+							<option>Deportes</option>
+							</select>
+							</div>
+						</div>
+						</div>
+						
+						<div class="row">
+						<div class="span7">
+							<div class="input-control select">
+							<label>Categoría específica</label>
+							<select name="ce">
+							<option>Sueteres</option>
+							<option>Blusas</option>
+							<option>Pantalones</option>
+							</select>
+							</div>
+						</div>
+						</div>
 					</div>
+					
+					
+							
+					</div>
+	</div>
 				</div>
-				
+				<div class="row">
+					<hr>
+					<div class="span3 offset9">
+					<button class="command-button primary">
+					<i class="icon-floppy on-left"></i>
+					Dar de alta 
+					<small>una nueva prenda</small>
+					</div>
+					</button>					
+					
+					
 				</div>
+				</form>
 				<!--
 				<div class="accordion-frame">
 				<a href="#" class="heading bg-lightBlue fg-black">Blusas</a>
@@ -197,24 +251,19 @@
 				<div class="content">...</div>
 				</div>-->
 				
-			</div>
+			
 	</div>
-    	
-		    
-		
-		
-		
-		</div>
-
+</div>
+<!--
 	    <div class="row ">
 		    <div class="span6" >level 2 </div>
 		    <div class="span6" >level 2 </div>
-    	    </div>
+    	    </div>-->
 
 
-</div>
-</div>
+
 <script>
+var c=1;
 function mostrarImagen(input,imagen,a) {
   if(a){
 	if (input.files && input.files[0]) {
@@ -224,8 +273,9 @@ function mostrarImagen(input,imagen,a) {
 				}
 				reader.readAsDataURL(input.files[0]);
 		 }
-	}else{
+	}else{//para cuando hay que borrar imagenes
 	$(input).next().val('');
+	$(input).replaceWith('<input type="file" name="[a]" id="[b]"/>'.replace('[b]',input).replace('[a]',input));
 	$(imagen).attr('src','');	
 	}  
 return true;
@@ -237,6 +287,7 @@ return true;
 	});
 return true;
 	}
+ 
  
  
  $("#btnEliminar1").click(function(event){
@@ -271,6 +322,23 @@ $("#file_url3").change(function(){
  ocultarFILEshowBoton("#file3","#btnEliminar3");
 });
 
+function createUUID() {
+    // http://www.ietf.org/rfc/rfc4122.txt
+    var s = [];
+    var hexDigits = "0123456789abcdef";
+    for (var i = 0; i < 36; i++) {
+        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+    }
+    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+    s[8] = s[13] = s[18] = s[23] = "-";
+
+    var uuid = s.join("");
+    $('.identificador').val(uuid);
+	$('.numElementos').val(c);
+	return true
+}
+
 function bottom(){
 $('html, body').animate({
              scrollTop: $(document).height()
@@ -280,21 +348,25 @@ return true;
 }
 
 $('#addTalla').click(function(){
+c=c+1;
 var a;
 a=$('#tallaRow');
-a.after('<div class="row"><div class="span2"><div class="input-control text"><input type="text" value="" placeholder="Talla"/><button class="btn-clear"></button></div></div><div class="span2"><div class="input-control text"><input type="text" value="" placeholder="Precio"/><button class="btn-clear"></button></div></div><div class="span1"><i id="removeTalla" onclick="removeTalla(this);" class="icon-minus on-left" style="background: white; color: black; padding: 10px; border-radius: 50%"></i></div></div>');
+a.after('<div class="row"><div class="span2"><div class="input-control text"><label>Talla:</label><input name="talla{T}" type="text" value="" placeholder="Talla"/></div></div><div class="span2"><div class="input-control text"><label>Precio:</label><input name="precio{P}" type="text" value="" placeholder="Precio"/></div></div><div class="span1"><i id="removeTalla" onclick="removeTalla(this);" class="icon-minus on-left" style="background: white; color: black; padding: 10px; border-radius: 50%"></i></div></div>'.replace('{P}',c).replace('{T}',c));
+$('.numElementos').val(c);
 bottom();
 });
 
 
 
 function removeTalla(a){
+c=c-1;
 $(a).closest('div').parent('div').remove();
+$('.numElementos').val(c);
 return true;
 //alert($(a).html());
 };
 
-$("img").on('click', function(){
+$("img.catalogo").on('click', function(){
 if($(this).attr("src")!=""){
 var a=$(this).clone();
 a.css({'width' : '300px' , 'height' : '430px'});
